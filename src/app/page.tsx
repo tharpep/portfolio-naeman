@@ -15,7 +15,7 @@ export default function Home() {
                     <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                         Mechanical Engineering student at Purdue University.
                         <br />
-                        <span className="text-amber-400">[Add your tagline here - e.g., "Designing solutions from concept to prototype."]</span>
+                        <span className="text-amber-400">[Add your tagline here - e.g., &quot;Designing solutions from concept to prototype.&quot;]</span>
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <Link
