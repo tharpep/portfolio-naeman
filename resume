@@ -1,0 +1,115 @@
+% ===============================================================
+% Naeman Khatib – One-Page Résumé (Compact with Aligned Dates)
+% ===============================================================
+
+\documentclass[letterpaper,10pt]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=0.6in]{geometry}
+\usepackage{parskip}
+\setlength{\parskip}{1pt} % Increased spacing between paragraphs
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=3pt,topsep=4pt,parsep=0pt,leftmargin=*} % Slightly more breathing room in bullets
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{}{0.4em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{3pt}{3pt} % More vertical spacing before/after sections
+\usepackage{array}
+\renewcommand{\arraystretch}{1} % Slightly taller line spacing in tables
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{empty}
+
+% ===== Header =====
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  {\huge\bfseries Naeman Khatib} & \href{mailto:nkhatib1022@gmail.com}{(317)998-7538}  {   }{nkhatib1022@gmail.com} \\
+  & \href{https://linkedin.com/in/naeman-khatib}{linkedin.com/in/naeman-khatib}\\
+\end{tabular*}
+\vspace{6pt}\hrule\vspace{8pt} % Extra space around rule
+
+% ===== Education =====
+\section*{Education}
+\textbf{Purdue University}, West Lafayette, IN\hfill 
+\textit{Jul 2022 -- May 2026}\\
+\textit{Bachelor of Science in Mechanical Engineering | Minor in Mathematics} \hfill GPA: 3.82\\
+John Martinson Honors College, Goss Scholars Learning Community, Purdue Engineering Dean’s List, National Merit Finalist Scholarship, Tau Beta Pi Honors Society  
+
+% ===== Experience =====
+\section*{Research}
+\textbf{Transport: Modeling, Numerics and Theory Laboratory}, West Lafayette, IN \hfill 
+\textit{Aug 2025 -- Present}\\ 
+\textit{Undergraduate Researcher}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Programed using FEniCS to conduct ALE-FSI fluid simulations in elastic microchannels using the finite element method.
+\end{itemize}
+
+
+% ===== Academic & Personal Projects =====
+\section*{Project Experience}
+\textbf{Remote Controlled Flying Bison} --- Purdue ME 444 \hfill \textit{Jan -- May 2024}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Built a mechanical action animal toy using CAD in Creo Parametric, 3D printed physical prototyping, and microcontroller programming.
+  \item Designed the mechanism for the DC motor-driven legs using pin-in-slot and linkage joints to create animal-like movement when attached to the body.
+\end{itemize}
+
+\textbf{Drip Defender Prototype} --- Purdue ME Sophomore Design \hfill \textit{Aug-- Dec 2023}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Created a prototype for a dish drying rack for college dorm rooms using CAD in NX, laser-cut Acrylic, and steel wire-frame.
+\end{itemize}
+
+\textbf{Global Emergency Autonomous Response System Prototype} --- Purdue Honors Engineering \hfill \textit{Jan -- May 2023}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Designed, built, and programmed an autonomous rover using a BrickPi3 kit, Raspberry Pi, and MINDSTORMS EV3/NXT that can navigate a maze with physical and IR hazards.
+  \item Led the documentation process and the Python software design, implementing PID motor control with both distance and IR sensors to complete the maze in record time.
+\end{itemize}
+
+% ===== Extracurriculars =====
+\section*{Extracurriculars}
+\textbf{Medical Device Development and Manufacturing in Ireland} --- Purdue BME Study Abroad \hfill \textit{Mar 2025}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Studied the design and manufacture of medical devices at four biomedical engineering companies.
+\end{itemize}
+
+\textbf{Purdue ASME Grand Prix Team} \hfill \textit{Aug -- Dec 2024}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Worked with the testing and performance subteam to design and build a go-kart to race in the Purdue Grand Prix competition.
+  \item Conducted tests on the clutch spring mechanism using MATLAB and Excel to optimize the tuning of the clutch.
+\end{itemize}
+
+\textbf{Role of AI in the Future of Work and Society in Hiroshima, Japan} --- Global Leadership Program \hfill \textit{Aug 2024}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Worked in a joint program between Purdue University, Arizona State University, University of Texas at Austin, and Hiroshima University studying AI applications in Japanese society and industry.
+  \item Performed a case study on the future role of artificial intelligence in enhancing human capabilities using brain-computer interfaces, writing an analytic report and presentation with a team of four.
+
+\end{itemize}
+
+\textbf{Purdue Space Program- Satellites Subteam} \hfill \textit{Jan -- May 2023}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+  \item Worked with the mechanical subteam to create components of a 3U CubeSat with a satellite-bus-testing suite and 2U payload.
+  \item Designed the integration of the sun sensor navigational instrument using Fusion 360 for the body of the satellite.
+\end{itemize}
+
+% ===== Additional Experience =====
+\section*{Additional Experience}
+\textbf{Purdue Rack and Roll}, West Lafayette, IN \hfill \textit{Jan 2025 -- Present}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+    \item Managed daily operations and customer experience in a high-responsibility, two-person setting.
+\end{itemize}
+\textbf{Purdue Minority Engineering Program}, West Lafayette, IN \hfill \textit{Jun -- Aug 2023/2024}
+\begin{itemize}[itemsep=2pt,topsep=2pt]
+    \item Led an electrical engineering project in the Pre-Freshman and Cooperative Education (PREFACE) summer program. 
+    \item Constructed lesson plans and quizzes, instructed, graded work, and tutored Calculus 1 in the Engineering Academic Bootcamp (EABC) and Multiethnic Introduction to Engineering (MITE) summer programs. 
+\end{itemize}
+
+
+
+% ===== Skills =====
+\section*{Skills}
+ MATLAB/Simulink, Creo Parametric, NX, Fusion 360,  C, Python, Java, LaTeX, R, FEniCS, Arduino, Google Workspace 
+
+\end{document}
