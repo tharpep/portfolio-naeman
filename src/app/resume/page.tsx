@@ -14,7 +14,7 @@ export default function Resume() {
                     Naeman Khatib
                 </h1>
                 <p className="text-neutral-400 mb-8">
-                    (317) 998-7538 · nkhatib1022@gmail.com ·{" "}
+                    nkhatib1022@gmail.com ·{" "}
                     <a href="https://linkedin.com/in/naeman-khatib" className="text-amber-400 hover:text-amber-300">
                         linkedin.com/in/naeman-khatib
                     </a>
