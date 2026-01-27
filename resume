@@ -27,7 +27,7 @@
 
 % ===== Header =====
 \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
-  {\huge\bfseries Naeman Khatib} & \href{mailto:nkhatib1022@gmail.com}{(317)998-7538}  {   }{nkhatib1022@gmail.com} \\
+  {\huge\bfseries Naeman Khatib} & \href{mailto:nkhatib1022@gmail.com}{nkhatib1022@gmail.com} \\
   & \href{https://linkedin.com/in/naeman-khatib}{linkedin.com/in/naeman-khatib}\\
 \end{tabular*}
 \vspace{6pt}\hrule\vspace{8pt} % Extra space around rule
