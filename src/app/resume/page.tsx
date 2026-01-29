@@ -64,6 +64,18 @@ export default function Resume() {
                         Project Experience
                     </h2>
                     <div className="space-y-6">
+                        {/* Wolf Enclosure */}
+                        <div>
+                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                <h3 className="font-bold text-white">Wolf Enclosure Feeding System — ME Senior Design</h3>
+                                <span className="text-neutral-400 font-mono text-sm">Jan – May 2026</span>
+                            </div>
+                            <ul className="list-disc list-inside text-neutral-300 space-y-1 ml-2">
+                                <li>Created and manufactured a method to deliver carcasses in an animal enclosure for Wolf Park conservation center.</li>
+                                <li>Led meetings and set agendas, developed and executed test plans, and acted as liaison with the park&apos;s stakeholders.</li>
+                            </ul>
+                        </div>
+
                         {/* Flying Bison */}
                         <div>
                             <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
@@ -107,14 +119,26 @@ export default function Resume() {
                         Extracurriculars
                     </h2>
                     <div className="space-y-6">
-                        {/* Ireland */}
                         <div>
                             <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
                                 <h3 className="font-bold text-white">Medical Device Development in Ireland — Purdue BME Study Abroad</h3>
                                 <span className="text-neutral-400 font-mono text-sm">Mar 2025</span>
                             </div>
                             <ul className="list-disc list-inside text-neutral-300 space-y-1 ml-2">
-                                <li>Studied the design and manufacture of medical devices at four biomedical engineering companies.</li>
+                                <li>Studied medical device design and manufacturing processes during visits to four biomedical engineering companies.</li>
+                                <li>Toured the development centers of Abbott, Medtronic, Fort Wayne Metals, and Cook Medical.</li>
+                            </ul>
+                        </div>
+
+                        {/* Colombia */}
+                        <div>
+                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
+                                <h3 className="font-bold text-white">Professional, Intercultural, and Global Development in Colombia — ME Study Abroad</h3>
+                                <span className="text-neutral-400 font-mono text-sm">May 2023</span>
+                            </div>
+                            <ul className="list-disc list-inside text-neutral-300 space-y-1 ml-2">
+                                <li>Engaged with engineering faculty and industry leaders in Colombian technology and economic development.</li>
+                                <li>Developed intercultural teamwork and communication skills in Spanish and English by working with local students in Universidad del Norte in Barranquilla and Universidad de Los Andes in Bogotá.</li>
                             </ul>
                         </div>
 

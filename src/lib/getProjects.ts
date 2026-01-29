@@ -28,6 +28,15 @@ const projects: Project[] = [
     },
     // Academic Projects
     {
+        slug: "wolf-enclosure",
+        title: "Wolf Enclosure Feeding System",
+        description: "Created and manufactured a method to deliver carcasses in an animal enclosure for Wolf Park conservation center. Led meetings, developed test plans, and acted as liaison with park stakeholders.",
+        technologies: ["Project Management", "Manufacturing", "Testing", "Communication"],
+        timeline: "Jan - May 2026",
+        category: "academic",
+        status: "in-progress",
+    },
+    {
         slug: "flying-bison",
         title: "Remote Controlled Flying Bison",
         description: "Built a mechanical action animal toy using CAD in Creo Parametric, 3D printed physical prototyping, and microcontroller programming. Designed the mechanism for the DC motor-driven legs using pin-in-slot and linkage joints.",
