@@ -8,28 +8,42 @@ export default function Home() {
         <main className="text-neutral-100 min-h-screen">
             {/* Hero Section */}
             <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-20 md:py-28">
-                <div className="max-w-4xl">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-mono tracking-tight mb-6 text-white">
-                        Naeman Khatib
-                    </h1>
-                    <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                        Mechanical Engineering student at Purdue University.
-                        <br />
-                        <span className="text-amber-400">[Add your tagline here - e.g., &quot;Designing solutions from concept to prototype.&quot;]</span>
-                    </p>
-                    <div className="flex flex-wrap gap-4">
-                        <Link
-                            href="/projects"
-                            className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-900 font-semibold rounded-lg transition-colors"
-                        >
-                            View Projects
-                        </Link>
-                        <Link
-                            href="/resume"
-                            className="px-6 py-3 border border-neutral-600 hover:border-amber-500 text-neutral-300 hover:text-white font-semibold rounded-lg transition-colors"
-                        >
-                            Resume
-                        </Link>
+                <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+                    <div className="flex-1 text-center md:text-left">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-mono tracking-tight mb-6 text-white">
+                            Naeman Khatib
+                        </h1>
+                        <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl mx-auto md:mx-0">
+                            Mechanical Engineering student at Purdue University.
+                            <br />
+                            <span className="text-amber-400">Passionate about computer modeling, manufacturing, and robotics.</span>
+                        </p>
+                        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <Link
+                                href="/projects"
+                                className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-900 font-semibold rounded-lg transition-colors"
+                            >
+                                View Projects
+                            </Link>
+                            <Link
+                                href="/resume"
+                                className="px-6 py-3 border border-neutral-600 hover:border-amber-500 text-neutral-300 hover:text-white font-semibold rounded-lg transition-colors"
+                            >
+                                Resume
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Hero Image */}
+                    <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 shrink-0 relative">
+                        <div className="absolute inset-0 rounded-full border-2 border-neutral-800 bg-neutral-800 overflow-hidden shadow-2xl">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src="/naeman.jpg"
+                                alt="Naeman Khatib"
+                                className="object-cover w-full h-full"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -82,7 +96,7 @@ export default function Home() {
                     </a>
                 </div>
             </section>
-        </main>
+        </main >
     );
 }
 
