@@ -45,7 +45,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-neutral-900`}
+                className={`${inter.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-cream`}
             >
                 <Nav />
                 {children}

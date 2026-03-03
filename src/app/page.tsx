@@ -5,122 +5,136 @@ export default function Home() {
     const featuredProjects = getFeaturedProjects();
 
     return (
-        <main className="text-neutral-100 min-h-screen">
-            {/* Hero Section */}
-            <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-20 md:py-28">
-                <div className="max-w-4xl">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-mono tracking-tight mb-6 text-white">
+        <main className="text-ink min-h-screen">
+            {/* Hero -- editorial two-column */}
+            <section className="px-6 sm:px-8 md:px-16 lg:px-24 pt-16 pb-12 md:pt-24 md:pb-16">
+                <div className="max-w-5xl">
+                    <p className="label-technical mb-4">Mechanical Engineering, Purdue University</p>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink leading-[1.1]">
                         Naeman Khatib
                     </h1>
-                    <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                        Mechanical Engineering student at Purdue University.
-                        <br />
-                        <span className="text-amber-400">[Add your tagline here - e.g., &quot;Designing solutions from concept to prototype.&quot;]</span>
-                    </p>
-                    <div className="flex flex-wrap gap-4">
-                        <Link
-                            href="/projects"
-                            className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-900 font-semibold rounded-lg transition-colors"
-                        >
-                            View Projects
-                        </Link>
-                        <Link
-                            href="/resume"
-                            className="px-6 py-3 border border-neutral-600 hover:border-amber-500 text-neutral-300 hover:text-white font-semibold rounded-lg transition-colors"
-                        >
-                            Resume
-                        </Link>
+
+                    <div className="mt-8 md:mt-10 grid md:grid-cols-[1fr_280px] gap-12 md:gap-16 items-start">
+                        <p className="text-lg md:text-xl text-ink-mid leading-relaxed max-w-xl">
+                            I design, simulate, and build mechanical systems — from
+                            CAD models through FEA to physical prototypes. Currently
+                            finishing my senior year and managing the{" "}
+                            <Link href="/projects/wolf-park-deer-dash" className="text-teal hover:text-teal-dark border-b border-teal/30 transition-colors">
+                                Deer Dash
+                            </Link>{" "}
+                            senior design project for Wolf Park.
+                        </p>
+
+                        <aside className="border-l-2 border-teal/40 pl-5">
+                            <p className="label-technical mb-2">Currently</p>
+                            <p className="text-ink-mid text-sm leading-relaxed">
+                                Senior Design PM at Wolf Park<br />
+                                Undergrad researcher — ALE-FSI simulations<br />
+                                Graduating May 2026
+                            </p>
+                            <div className="mt-4 flex gap-4 text-sm">
+                                <Link href="/projects" className="text-teal hover:text-teal-dark transition-colors">
+                                    Projects
+                                </Link>
+                                <Link href="/resume" className="text-teal hover:text-teal-dark transition-colors">
+                                    Resume
+                                </Link>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </section>
 
-            {/* Featured Projects - Large 2-Column Visual Cards */}
-            <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-16 border-t border-neutral-800">
-                <h2 className="text-2xl md:text-3xl font-bold font-mono text-white mb-10">
-                    Featured Projects
-                </h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                    {featuredProjects.map((project) => (
-                        <FeaturedProjectCard key={project.slug} project={project} />
+            {/* Selected Work */}
+            <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-14">
+                <div className="divider-dimension mb-10" />
+                <p className="label-technical mb-6">Selected Work</p>
+
+                {featuredProjects[0] && <LeadProjectCard project={featuredProjects[0]} />}
+
+                <div className="mt-8 grid sm:grid-cols-3 gap-4">
+                    {featuredProjects.slice(1).map((project) => (
+                        <CompactProjectCard key={project.slug} project={project} />
                     ))}
                 </div>
-                <div className="mt-10">
+
+                <div className="mt-8">
                     <Link
                         href="/projects"
-                        className="text-amber-400 hover:text-amber-300 font-medium transition-colors"
+                        className="text-sm text-ink-faint hover:text-ink transition-colors"
                     >
-                        View all projects →
+                        All projects &rarr;
                     </Link>
                 </div>
             </section>
 
-            {/* Connect Section */}
-            <section className="px-6 sm:px-8 md:px-16 lg:px-24 py-16 border-t border-neutral-800">
-                <h2 className="text-2xl md:text-3xl font-bold font-mono text-white mb-8">
-                    Connect
-                </h2>
-                <div className="flex flex-wrap gap-4">
-                    <a
-                        href="https://linkedin.com/in/naeman-khatib"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-3 border border-neutral-700 hover:border-amber-500 text-neutral-300 hover:text-white rounded-lg transition-colors"
-                    >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
+            {/* Contact -- understated inline */}
+            <section className="px-6 sm:px-8 md:px-16 lg:px-24 pb-20 pt-8">
+                <div className="divider-dimension mb-8" />
+                <p className="text-ink-mid text-[0.9375rem]">
+                    Open to full-time roles starting summer 2026.{" "}
+                    <a href="mailto:nkhatib1022@gmail.com" className="text-teal hover:text-teal-dark transition-colors">
+                        nkhatib1022@gmail.com
+                    </a>{" "}
+                    /{" "}
+                    <a href="https://linkedin.com/in/naeman-khatib" target="_blank" rel="noopener noreferrer" className="text-teal hover:text-teal-dark transition-colors">
                         LinkedIn
                     </a>
-                    <a
-                        href="mailto:nkhatib1022@gmail.com"
-                        className="inline-flex items-center gap-2 px-5 py-3 border border-neutral-700 hover:border-amber-500 text-neutral-300 hover:text-white rounded-lg transition-colors"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        Email
-                    </a>
-                </div>
+                </p>
             </section>
         </main>
     );
 }
 
-function FeaturedProjectCard({ project }: { project: Project }) {
+function LeadProjectCard({ project }: { project: Project }) {
     return (
         <Link
             href={`/projects/${project.slug}`}
-            className="group block rounded-xl border border-neutral-800 bg-neutral-800/30 hover:border-amber-500/50 transition-colors overflow-hidden"
+            className="group block border border-warm-line bg-cream-card hover:border-teal/40 transition-colors rounded-sm overflow-hidden"
         >
-            {/* Image Placeholder */}
-            <div className="aspect-video bg-neutral-800 flex items-center justify-center border-b border-neutral-700">
-                <span className="text-neutral-500 text-sm font-mono">[Project image/render]</span>
-            </div>
-
-            {/* Content */}
-            <div className="p-5">
-                <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-bold text-lg text-white group-hover:text-amber-400 transition-colors">
+            <div className="p-6 md:p-8 md:flex md:gap-10 md:items-start">
+                <div className="md:w-48 flex-shrink-0 mb-4 md:mb-0">
+                    <span className="label-technical">{project.timeline}</span>
+                    <div className="mt-2 flex items-center gap-2">
+                        <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'completed' ? 'bg-green-600' : 'bg-teal'}`} />
+                        <span className="text-xs text-ink-faint">
+                            {project.status === 'completed' ? 'Done' : 'Active'}
+                        </span>
+                    </div>
+                </div>
+                <div className="flex-1">
+                    <h3 className="text-xl font-bold text-ink group-hover:text-teal transition-colors mb-2">
                         {project.title}
                     </h3>
-                    <span className="text-xs text-neutral-500 font-mono ml-2 flex-shrink-0">
-                        {project.timeline}
-                    </span>
-                </div>
-                <p className="text-neutral-400 text-sm line-clamp-2 mb-3">
-                    {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                        <span
-                            key={tech}
-                            className="px-2 py-1 text-xs bg-amber-900/20 text-amber-400 rounded border border-amber-800/30"
-                        >
-                            {tech}
-                        </span>
-                    ))}
+                    <p className="text-ink-mid text-[0.9375rem] leading-relaxed mb-4">
+                        {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                        {project.technologies.map((tech) => (
+                            <span key={tech} className="text-xs font-mono text-ink-faint">
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </div>
+        </Link>
+    );
+}
+
+function CompactProjectCard({ project }: { project: Project }) {
+    return (
+        <Link
+            href={`/projects/${project.slug}`}
+            className="group block border border-warm-line hover:border-teal/40 bg-cream-card transition-colors rounded-sm p-4"
+        >
+            <span className="label-technical block mb-2">{project.timeline}</span>
+            <h3 className="font-semibold text-ink group-hover:text-teal transition-colors text-[0.9375rem] mb-1">
+                {project.title}
+            </h3>
+            <p className="text-ink-mid text-sm line-clamp-2">
+                {project.description}
+            </p>
         </Link>
     );
 }

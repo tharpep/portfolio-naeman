@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
-        <footer className="mt-auto py-8 px-6 border-t border-neutral-800">
-            <div className="max-w-6xl mx-auto text-center text-neutral-500 text-sm space-y-2">
+        <footer className="mt-auto py-8 px-6 border-t border-warm-line">
+            <div className="max-w-6xl mx-auto text-center text-ink-faint text-sm space-y-2">
                 <p>© {new Date().getFullYear()} Naeman Khatib</p>
                 <p>
                     Built by{" "}
@@ -9,7 +9,7 @@ export default function Footer() {
                         href="https://pryce-tharpe.dev"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-amber-400/70 hover:text-amber-400 transition-colors"
+                        className="text-teal/70 hover:text-teal transition-colors"
                     >
                         Pryce Tharpe
                     </a>

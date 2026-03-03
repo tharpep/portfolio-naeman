@@ -37,78 +37,71 @@ export default async function ProjectPage({ params }: PageProps) {
     }
 
     return (
-        <main className="text-neutral-100 min-h-screen px-6 sm:px-8 md:px-16 lg:px-24 py-12">
-            <div className="max-w-4xl mx-auto">
-                {/* Back Link */}
+        <main className="text-ink min-h-screen px-6 sm:px-8 md:px-16 lg:px-24 py-12">
+            <div className="max-w-4xl">
                 <Link
                     href="/projects"
-                    className="inline-flex items-center gap-2 text-neutral-400 hover:text-white mb-8 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm text-ink-faint hover:text-ink mb-10 transition-colors"
                 >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                    </svg>
-                    Back to Projects
+                    &larr; Projects
                 </Link>
 
-                {/* Header */}
                 <div className="mb-8">
-                    <div className="flex items-center gap-3 mb-4">
-                        <span className={`px-3 py-1 text-sm rounded-full ${project.status === 'completed'
-                                ? 'bg-green-900/30 text-green-400 border border-green-800/30'
-                                : 'bg-amber-900/30 text-amber-400 border border-amber-800/30'
-                            }`}>
+                    <div className="flex items-center gap-3 mb-3">
+                        <span className="label-technical">{project.timeline}</span>
+                        <span className="text-ink-faint">&middot;</span>
+                        <span className={`text-xs font-mono ${project.status === 'completed' ? 'text-green-700' : 'text-teal'}`}>
                             {project.status === 'completed' ? 'Completed' : 'In Progress'}
                         </span>
-                        <span className="text-neutral-500 font-mono text-sm">{project.timeline}</span>
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-bold font-mono text-white mb-4">
+                    <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-ink mb-4">
                         {project.title}
                     </h1>
-                </div>
-
-                {/* Image Placeholder */}
-                <div className="aspect-video bg-neutral-800 rounded-xl flex items-center justify-center border border-neutral-700 mb-8">
-                    <span className="text-neutral-500 font-mono">[Add project image/CAD render here]</span>
-                </div>
-
-                {/* Description */}
-                <section className="mb-8">
-                    <h2 className="text-xl font-bold text-amber-400 mb-4">Overview</h2>
-                    <p className="text-neutral-300 leading-relaxed">
-                        {project.description}
-                    </p>
-                    <p className="text-amber-400/80 mt-4 text-sm">
-                        [Add more detailed description here - what was the challenge, your approach, and results]
-                    </p>
-                </section>
-
-                {/* Technologies */}
-                <section className="mb-8">
-                    <h2 className="text-xl font-bold text-amber-400 mb-4">Technologies</h2>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
                         {project.technologies.map((tech) => (
-                            <span
-                                key={tech}
-                                className="px-3 py-2 bg-neutral-800 text-neutral-300 rounded-lg border border-neutral-700"
-                            >
+                            <span key={tech} className="text-sm font-mono text-ink-faint">
                                 {tech}
                             </span>
                         ))}
                     </div>
-                </section>
+                </div>
 
-                {/* Additional Images Placeholder */}
-                <section>
-                    <h2 className="text-xl font-bold text-amber-400 mb-4">Gallery</h2>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="aspect-square bg-neutral-800 rounded-lg flex items-center justify-center border border-neutral-700">
-                            <span className="text-neutral-500 text-sm font-mono text-center px-4">[Additional image]</span>
+                {/* Image */}
+                {project.imageUrl && !project.pdfUrl && (
+                    <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        className="w-full aspect-video object-cover rounded-sm border border-warm-line mb-8"
+                    />
+                )}
+
+                <div className="divider-dimension" />
+
+                <p className="text-ink-mid text-lg leading-relaxed mt-8 mb-10 max-w-2xl">
+                    {project.description}
+                </p>
+
+                {/* PDF Embed */}
+                {project.pdfUrl && (
+                    <section className="mb-8">
+                        <p className="label-technical mb-4">{project.pdfLabel ?? "Document"}</p>
+                        <div className="w-full rounded-sm overflow-hidden border border-warm-line" style={{ height: "780px" }}>
+                            <iframe
+                                src={project.pdfUrl}
+                                className="w-full h-full"
+                                title={project.pdfLabel ?? project.title}
+                            />
                         </div>
-                        <div className="aspect-square bg-neutral-800 rounded-lg flex items-center justify-center border border-neutral-700">
-                            <span className="text-neutral-500 text-sm font-mono text-center px-4">[Additional image]</span>
-                        </div>
-                    </div>
-                </section>
+                        <a
+                            href={project.pdfUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 mt-3 text-sm text-teal hover:text-teal-dark transition-colors"
+                        >
+                            Open in new tab &rarr;
+                        </a>
+                    </section>
+                )}
             </div>
         </main>
     );

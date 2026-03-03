@@ -6,6 +6,9 @@ export interface Project {
     timeline: string;
     category: string;
     status: 'completed' | 'in-progress';
+    pdfUrl?: string;
+    pdfLabel?: string;
+    imageUrl?: string;
 }
 
 export interface ProjectCategory {
@@ -16,6 +19,18 @@ export interface ProjectCategory {
 }
 
 const projects: Project[] = [
+    // Case Studies
+    {
+        slug: "leak-detection-case-study",
+        title: "Pipeline Leak Detection Case Study",
+        description: "An engineering case study analyzing leak detection methodologies for pipeline systems, covering failure modes, detection techniques, and recommendations.",
+        technologies: ["Engineering Analysis", "Technical Writing"],
+        timeline: "2025",
+        category: "case-study",
+        status: "completed",
+        pdfUrl: "/Leak%20Detection%20Case%20Study.pdf",
+        pdfLabel: "Case Study",
+    },
     // Research
     {
         slug: "ale-fsi-simulations",
@@ -27,6 +42,17 @@ const projects: Project[] = [
         status: "in-progress",
     },
     // Academic Projects
+    {
+        slug: "wolf-park-deer-dash",
+        title: "Deer Dash – Wolf Park Carcass Feeder",
+        description: "Senior design project to build a wholly mechanical device that safely delivers animal carcasses into wolf enclosures at Wolf Park in Indiana. The system enables wolves to exhibit natural leaping and feeding behaviors, improving enrichment and safety for animals, staff, and guests. Serving as Project Manager and Stakeholder Liaison.",
+        technologies: ["Mechanical Design", "CAD", "FEA", "Structural Analysis"],
+        timeline: "Jan – May 2026",
+        category: "academic",
+        status: "in-progress",
+        pdfUrl: "/PDR_Slides-1.pdf",
+        pdfLabel: "Preliminary Design Review",
+    },
     {
         slug: "flying-bison",
         title: "Remote Controlled Flying Bison",
@@ -86,6 +112,12 @@ export function getProjectBySlug(slug: string): Project | undefined {
 export function getProjectsByCategory(): ProjectCategory[] {
     const categories: ProjectCategory[] = [
         {
+            id: "case-study",
+            name: "Case Studies",
+            description: "Independent engineering analyses and technical write-ups.",
+            projects: projects.filter((p) => p.category === "case-study"),
+        },
+        {
             id: "research",
             name: "Research",
             description: "Computational mechanics and simulation work.",
@@ -110,9 +142,9 @@ export function getProjectsByCategory(): ProjectCategory[] {
 
 export function getFeaturedProjects(): Project[] {
     return [
-        projects.find((p) => p.slug === "flying-bison")!,
-        projects.find((p) => p.slug === "gears-rover")!,
-        projects.find((p) => p.slug === "asme-grand-prix")!,
+        projects.find((p) => p.slug === "wolf-park-deer-dash")!,
         projects.find((p) => p.slug === "ale-fsi-simulations")!,
+        projects.find((p) => p.slug === "flying-bison")!,
+        projects.find((p) => p.slug === "asme-grand-prix")!,
     ];
 }

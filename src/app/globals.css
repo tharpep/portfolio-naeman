@@ -1,16 +1,85 @@
 @import "tailwindcss";
 
-/* ─────────── Naeman Portfolio Styles ─────────── */
+/* ─────────── Desert + Engineering Theme ─────────── */
 
+@theme {
+  /* Backgrounds */
+  --color-cream: #F5F0E8;
+  --color-cream-card: #EDE8DC;
+  --color-cream-deep: #E2DCD2;
+
+  /* Text */
+  --color-ink: #1C1A17;
+  --color-ink-mid: #5C5449;
+  --color-ink-faint: #8C8278;
+
+  /* Border */
+  --color-warm-line: #D4CEC4;
+
+  /* Accent: amber / burnt orange */
+  --color-teal: #D97706;
+  --color-teal-dark: #B45309;
+  --color-teal-faint: #FEF3C7;
+}
+
+/* Legacy accent vars (used by focus/selection) */
 :root {
-  --color-accent: #f59e0b; /* amber-500 */
-  --color-accent-light: #fbbf24; /* amber-400 */
-  --color-accent-dark: #d97706; /* amber-600 */
+  --color-accent: #D97706;
+  --color-accent-light: #F59E0B;
+  --color-accent-dark: #B45309;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Graph-paper background */
+body {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(217, 119, 6, 0.03) 39px,
+      rgba(217, 119, 6, 0.03) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 39px,
+      rgba(217, 119, 6, 0.03) 39px,
+      rgba(217, 119, 6, 0.03) 40px
+    );
+  background-size: 40px 40px;
+}
+
+/* Dimension-line divider */
+.divider-dimension {
+  position: relative;
+  height: 1px;
+  background: var(--color-warm-line);
+  margin: 2.5rem 0;
+}
+.divider-dimension::before,
+.divider-dimension::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background: var(--color-warm-line);
+}
+.divider-dimension::before { left: 0; }
+.divider-dimension::after { right: 0; }
+
+/* Technical label style */
+.label-technical {
+  font-family: var(--font-geist-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
 }
 
 /* Focus states for accessibility */
@@ -23,7 +92,7 @@ html {
 /* Selection styling */
 ::selection {
   background: var(--color-accent);
-  color: #171717;
+  color: #F5F0E8;
 }
 
 /* Custom scrollbar */
@@ -32,16 +101,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #171717;
+  background: #EDE8DC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #404040;
+  background: #C4BDB3;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #525252;
+  background: #A89E94;
 }
 
 /* Respect reduced motion preference */
