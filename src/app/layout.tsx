@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://naemankhatib.com"),
+    metadataBase: new URL("https://portfolio-naeman.vercel.app/"),
     title: "Naeman Khatib - Mechanical Engineer",
     description: "Mechanical Engineering student at Purdue University. Interested in design, simulation, and robotics.",
     keywords: ["Naeman Khatib", "Mechanical Engineer", "Purdue University", "CAD", "MATLAB", "Robotics", "Design"],
