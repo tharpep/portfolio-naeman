@@ -8,25 +8,36 @@ import "./globals.css";
 const inter = Inter({
     variable: "--font-geist-sans",
     subsets: ["latin"],
+    display: "swap",
+    preload: true,
 });
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
     subsets: ["latin"],
+    display: "swap",
+    preload: true,
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://naemankhatib.com"),
     title: "Naeman Khatib - Mechanical Engineer",
     description: "Mechanical Engineering student at Purdue University. Interested in design, simulation, and robotics.",
     keywords: ["Naeman Khatib", "Mechanical Engineer", "Purdue University", "CAD", "MATLAB", "Robotics", "Design"],
     authors: [{ name: "Naeman Khatib" }],
     creator: "Naeman Khatib",
+    robots: {
+        index: true,
+        follow: true,
+    },
     icons: {
         icon: '/favicon.ico',
     },
     openGraph: {
         type: 'website',
         locale: 'en_US',
+        url: 'https://naemankhatib.com',
+        siteName: 'Naeman Khatib',
         title: 'Naeman Khatib - Mechanical Engineer',
         description: 'Mechanical Engineering student at Purdue University.',
     },

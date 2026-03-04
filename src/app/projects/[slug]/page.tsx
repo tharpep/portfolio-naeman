@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, getAllProjects } from "@/lib/getProjects";
 import type { Metadata } from "next";
@@ -68,11 +69,16 @@ export default async function ProjectPage({ params }: PageProps) {
 
                 {/* Image */}
                 {project.imageUrl && !project.pdfUrl && (
-                    <img
-                        src={project.imageUrl}
-                        alt={project.title}
-                        className="w-full aspect-video object-cover rounded-sm border border-warm-line mb-8"
-                    />
+                    <div className="relative w-full aspect-video rounded-sm border border-warm-line mb-8 overflow-hidden">
+                        <Image
+                            src={project.imageUrl}
+                            alt={project.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 960px"
+                            priority={false}
+                        />
+                    </div>
                 )}
 
                 <div className="divider-dimension" />
@@ -90,6 +96,7 @@ export default async function ProjectPage({ params }: PageProps) {
                                 src={project.pdfUrl}
                                 className="w-full h-full"
                                 title={project.pdfLabel ?? project.title}
+                                loading="lazy"
                             />
                         </div>
                         <a
