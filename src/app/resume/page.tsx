@@ -124,26 +124,8 @@ export default function Resume() {
                                 <h3 className="font-bold text-ink">Medical Device Development in Ireland — Purdue BME Study Abroad</h3>
                                 <span className="text-ink-faint font-mono text-sm">Mar 2025</span>
                             </div>
-<<<<<<< HEAD
                             <ul className="list-disc list-inside text-ink-mid space-y-1 ml-2">
                                 <li>Studied the design and manufacture of medical devices at four biomedical engineering companies.</li>
-=======
-                            <ul className="list-disc list-inside text-neutral-300 space-y-1 ml-2">
-                                <li>Studied medical device design and manufacturing processes during visits to four biomedical engineering companies.</li>
-                                <li>Toured the development centers of Abbott, Medtronic, Fort Wayne Metals, and Cook Medical.</li>
-                            </ul>
-                        </div>
-
-                        {/* Colombia */}
-                        <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-white">Professional, Intercultural, and Global Development in Colombia — ME Study Abroad</h3>
-                                <span className="text-neutral-400 font-mono text-sm">May 2023</span>
-                            </div>
-                            <ul className="list-disc list-inside text-neutral-300 space-y-1 ml-2">
-                                <li>Engaged with engineering faculty and industry leaders in Colombian technology and economic development.</li>
-                                <li>Developed intercultural teamwork and communication skills in Spanish and English by working with local students in Universidad del Norte in Barranquilla and Universidad de Los Andes in Bogotá.</li>
->>>>>>> 0168429fe85318b9c20629dbcd8bab7d46ab6ec6
                             </ul>
                         </div>
 

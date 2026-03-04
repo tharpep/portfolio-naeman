@@ -43,7 +43,6 @@ const projects: Project[] = [
     },
     // Academic Projects
     {
-<<<<<<< HEAD
         slug: "wolf-park-deer-dash",
         title: "Deer Dash – Wolf Park Carcass Feeder",
         description: "Senior design project to build a wholly mechanical device that safely delivers animal carcasses into wolf enclosures at Wolf Park in Indiana. The system enables wolves to exhibit natural leaping and feeding behaviors, improving enrichment and safety for animals, staff, and guests. Serving as Project Manager and Stakeholder Liaison.",
@@ -53,15 +52,6 @@ const projects: Project[] = [
         status: "in-progress",
         pdfUrl: "/PDR_Slides-1.pdf",
         pdfLabel: "Preliminary Design Review",
-=======
-        slug: "wolf-enclosure",
-        title: "Wolf Enclosure Feeding System",
-        description: "Created and manufactured a method to deliver carcasses in an animal enclosure for Wolf Park conservation center. Led meetings, developed test plans, and acted as liaison with park stakeholders.",
-        technologies: ["Project Management", "Manufacturing", "Testing", "Communication"],
-        timeline: "Jan - May 2026",
-        category: "academic",
-        status: "in-progress",
->>>>>>> 0168429fe85318b9c20629dbcd8bab7d46ab6ec6
     },
     {
         slug: "flying-bison",
