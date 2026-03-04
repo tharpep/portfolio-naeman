@@ -67,10 +67,10 @@ export default function Resume() {
                         {/* Wolf Enclosure */}
                         <div>
                             <div className="flex flex-col sm:flex-row sm:justify-between mb-2">
-                                <h3 className="font-bold text-white">Wolf Enclosure Feeding System — ME Senior Design</h3>
-                                <span className="text-neutral-400 font-mono text-sm">Jan – May 2026</span>
+                                <h3 className="font-bold text-ink">Wolf Enclosure Feeding System — ME Senior Design</h3>
+                                <span className="text-ink-faint font-mono text-sm">Jan – May 2026</span>
                             </div>
-                            <ul className="list-disc list-inside text-neutral-300 space-y-1 ml-2">
+                            <ul className="list-disc list-inside text-ink-mid space-y-1 ml-2">
                                 <li>Created and manufactured a method to deliver carcasses in an animal enclosure for Wolf Park conservation center.</li>
                                 <li>Led meetings and set agendas, developed and executed test plans, and acted as liaison with the park&apos;s stakeholders.</li>
                             </ul>
